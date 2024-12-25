@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>typr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      media="(prefers-color-scheme:light)"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/themes/light.css"
+    />
+    <link
+      rel="stylesheet"
+      media="(prefers-color-scheme:dark)"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/themes/dark.css"
+      onload="document.documentElement.classList.add('sl-theme-dark');"
+    />
+
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/shoelace-autoloader.js"
+    ></script>
+  </head>
+
+  <body>
+    <header><h3>typr</h3></header>
+    <div class="centre" id="landingInfo">
+      <h1>typr</h1>
+      <p>Typing speed checker</p>
+      <h4>Check how fast you can type using this app</h4>
+      <br />
+      <sl-button
+        onclick="loadQuote()"
+        size="large"
+        variant="primary"
+        pill
+        style="width: 35%"
+        >Start</sl-button
+      >
+    </div>
+    <div class="centre hidden" id="test">
+      <p id="testPara">Loading Paragraph..</p>
+      <h1 id="text"></h1>
+    </div>
+    <sl-card id="info" class="hidden">
+      Type the first character to start
+    </sl-card>
+    <sl-card id="timer" class="hidden">
+      <span id="timerText">30</span>
+      <div id="results" class="hidden">
+        <h2>Results</h2>
+        <br />
+        <div class="centre" id="resultWPM">
+          <b id="resultWPMText">70</b> WPM
+        </div>
+        <br />
+        <div class="centre" id="resultErrors">
+          Out of the <b id="resultsWords">?</b> characters you typed, you have
+          made <b class="error" id="resultErrorsText">9</b> mistakes
+        </div>
+        <br /><br />
+        <table id="recordsTable">
+          <tr>
+            <th>WPM</th>
+            <th>Date</th>
+            <th>Number Of Errors</th>
+          </tr>
+        </table>
+        <br />
+        <div class="centre">
+          <sl-button
+            onclick="location.reload()"
+            size="large"
+            variant="primary"
+            pill
+            style="width: 15vw"
+          >
+            <sl-icon slot="suffix" name="arrow-counterclockwise"></sl-icon>
+            Retry</sl-button
+          >
+        </div>
+      </div>
+    </sl-card>
+  </body>
+</html>

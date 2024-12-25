@@ -1,0 +1,170 @@
+html,
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+header {
+    padding-inline: 50px;
+    top: 15px;
+    left: 0;
+    right: 0;
+    position: sticky;
+}
+
+.centre {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+#landingInfo {
+    width: 50%;
+    padding-top: 5%;
+    text-align: center;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#test {
+    padding: 5%;
+    width: 70%;
+    text-align: center;
+    height: 50%;
+
+}
+
+h1 {
+    display: block;
+    word-break: break-word;
+    white-space: normal;
+}
+
+span {
+    display: inline-block;
+}
+
+.char {
+    display: inline-block;
+    line-height: 1;
+}
+
+h1 div {
+    opacity: .5;
+}
+
+h1 div.typed {
+    opacity: 1;
+}
+
+h1 div.zoom {
+    opacity: 1;
+    background-color: white;
+    color: black;
+}
+
+h1 div.space.error {
+    background-color: var(--sl-color-danger-500);
+}
+
+.error {
+    color: var(--sl-color-danger-600);
+
+}
+
+#text div {
+    width: min-content;
+    transition: all 0.01s;
+}
+
+h1 div.error {
+    color: var(--sl-color-danger-500);
+}
+
+#info {
+    position: fixed;
+    right: 40px;
+    top: 125px;
+}
+
+#timer:not(.modal) {
+    position: fixed;
+    right: 40px;
+    top: 35px;
+    --border-radius: 50%;
+    width: 65.6px;
+    height: 65.6px;
+    /* display: grid; */
+}
+
+#timer.modal {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+}
+
+#timer::part(body) {
+    margin: auto;
+}
+
+#results {
+    width: 50vw;
+    padding-bottom: 15px;
+    /* height: 4v   h; */
+}
+
+h2 {
+    margin: 0;
+    ;
+}
+
+#resultWPM {
+    font-size: 50px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    max-height: 35vh;
+    overflow-y: scroll;
+    display: inherit;
+}
+
+td,
+th {
+    border: 1px solid #494949;
+    text-align: left;
+    padding: 8px;
+}
+
+tr td {
+    width: 30vw;
+}
+
+tr td:nth-child(2n) {
+    width: 70vw;
+}
+
+#timer:not(.modal).lessTime {
+    --sl-panel-background-color: var(--sl-color-danger-500);
+    color: white;
+}
